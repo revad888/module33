@@ -13,9 +13,11 @@ namespace module33.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController()
         {
-            _logger = logger;
+            var logger = new Logger();
+            logger.WriteEvent("Сообщение о действии");
+            logger.WriteError("Сообщение об ошибке");
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
