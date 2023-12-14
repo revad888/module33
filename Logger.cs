@@ -1,6 +1,6 @@
 namespace module33;
 
-public class Logger
+public class Logger : ILogger
 {
     public void WriteEvent(string eventMessage) 
     {
